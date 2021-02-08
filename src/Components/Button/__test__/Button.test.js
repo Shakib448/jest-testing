@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Button from "../Button";
 import { render, cleanup } from "@testing-library/react";
-import renderer from 'react-test-renderer'
+import renderer from "react-test-renderer";
 
 afterEach(cleanup);
 it("renders without crashing", () => {
@@ -15,7 +15,15 @@ it("renders button correctly", () => {
   expect(getByTestId("button")).toHaveTextContent("save");
 });
 
-it('Mathces snapshot', () => {
-  const tree = renderer.create(<Button label="save"></Button>)
-  expect(tree).toMatchSnapshot()
-})
+it("match snapshot", () => {
+  const tree = renderer.create(<Button label="save"></Button>);
+  expect(tree).toMatchSnapshot();
+});
+it("match snapshot 2", () => {
+  const tree = renderer.create(<Button label="save"></Button>);
+  expect(tree).toMatchSnapshot();
+});
+it("match snapshot 3", () => {
+  const tree = renderer.create(<Button label="save"></Button>);
+  expect(tree).toMatchSnapshot();
+});
